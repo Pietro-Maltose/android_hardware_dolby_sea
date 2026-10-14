@@ -1,0 +1,17 @@
+// Fallback: the exact LunarisDolby.apk that was validated in the KernelSU module,
+// re-signed with the ROM's platform key (it uses sharedUserId android.uid.system).
+// Use it by replacing "LunarisDolby" with "LunarisDolbyPrebuilt" in dolby.mk.
+android_app_import {
+    name: "LunarisDolbyPrebuilt",
+    apk: "LunarisDolby.apk",
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    required: [
+        "preinstalled-packages-platform-dolby.xml",
+        "privapp-permissions-dolby.xml",
+    ],
+}

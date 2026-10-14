@@ -1,0 +1,5 @@
+hal_client_domain(hal_audio_default, hal_aidl_dms)
+get_prop(hal_audio_default, vendor_dolby_prop)
+# effect lib (libswdapaidl) runs inside the audio HAL and reads DMS data
+allow hal_audio_default vendor_dolby_file:dir r_dir_perms;
+allow hal_audio_default vendor_dolby_file:file r_file_perms;

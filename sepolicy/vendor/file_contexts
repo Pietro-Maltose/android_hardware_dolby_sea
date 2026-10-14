@@ -1,0 +1,2 @@
+/data/vendor/dolby(/.*)?                         u:object_r:vendor_dolby_file:s0
+/vendor/bin/hw/vendor\.dolby\.dms\.service       u:object_r:hal_aidl_dms_default_exec:s0
